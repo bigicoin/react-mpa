@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config client/webpack.config.js",
-    "prestart": "yarn build",
-    "start": "node index",
+    "prestart": "npm run build",
+    "start": "pm2 start pm2-config.json",
     "clean": "rm -rf .build"
   },
   "dependencies": {

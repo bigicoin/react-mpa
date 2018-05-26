@@ -8,11 +8,24 @@ There are many examples of single page applications (SPA), but for many projects
 
 This project is by no means finished. I hope for others to contribute so that it can improve over time and become an example to others entering what has become a very complex development environment.
 
-#### setup
+#### New setup/pre-requisites (bigicoin)
+
+Currently using and tested on: Node 8, npm 5+. Install [nvm](https://github.com/creationix/nvm), then:
+```bash
+$ nvm intall 8
+$ nvm use 8
+```
+
+Project currently using `pm2` to manage the node process, and contains pm2 configuration for auto build/restarts.
+Install `pm2` globally:
 
 ```bash
-$ yarn
-$ yarn start
+$ npm install -g pm2
+```
+
+To build & start node server in dev environment:
+```bash
+$ npm start
 ```
 
 #### Requirements
@@ -32,6 +45,17 @@ $ yarn start
 - [ ] Rebuild and restart server on file change
 - [x] Error pages
 - [ ] Decouple views from routes
+
+#### Todo (bigicoin) for development ease
+
+- [ ] Webpack config should allow prod and dev setup, outputs minified/unminified bundles - [link](https://stackoverflow.com/questions/25956937/how-to-build-minified-and-uncompressed-bundle-with-webpack)
+- [x] Add PM2 to project (pre-req for several items below)
+- [x] PM2 watch setup to autorestart server on file changes - [link](http://pm2.keymetrics.io/docs/usage/watch-and-restart/)
+- [ ] Node server with ES6 / babel transpiling to code server JS code in full ES6 - [link](http://pm2.keymetrics.io/docs/tutorials/using-transpilers-with-pm2)
+- [ ] Subtask: Server builds to `dist` bundle for PM2 to run for production setup
+- [ ] Subtask: Example server logic files per route in ES6 code
+- [ ] PM2 webpack setup so client JS code also auto rebuilds and restarts - [link](https://stackoverflow.com/questions/34230275/how-to-run-webpack-watch-using-pm2)
+- [ ] Option to build/include no client JS bundle at all for some pages (static)
 
 #### Webpack Dev server
 

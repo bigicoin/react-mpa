@@ -5,7 +5,7 @@ module.exports = ({ app, render }) => {
   })
 
   app.get('/about', (req, res) => {
-    res.send(render.home())
+    res.send(render.about())
   })
 
   app.get('/articles/:id', async (req, res) => {
