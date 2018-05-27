@@ -25,6 +25,7 @@ $ npm install -g pm2
 
 To build & start node server in dev environment:
 ```bash
+$ npm install
 $ npm start
 ```
 
@@ -51,8 +52,8 @@ $ npm start
 - [ ] Webpack config should allow prod and dev setup, outputs minified/unminified bundles - [link](https://stackoverflow.com/questions/25956937/how-to-build-minified-and-uncompressed-bundle-with-webpack)
 - [x] Add PM2 to project (pre-req for several items below)
 - [x] PM2 watch setup to autorestart server on file changes - [link](http://pm2.keymetrics.io/docs/usage/watch-and-restart/)
-- [ ] Node server with ES6 / babel transpiling to code server JS code in full ES6 - [link](http://pm2.keymetrics.io/docs/tutorials/using-transpilers-with-pm2)
-- [ ] Subtask: Server builds to `dist` bundle for PM2 to run for production setup
+- [x] Node server with ES6 / babel transpiling to code server JS code in full ES6 - [link](http://pm2.keymetrics.io/docs/tutorials/using-transpilers-with-pm2)
+- [x] Subtask: Server builds to `dist` bundle for PM2 to run for production setup
 - [ ] Subtask: Example server logic files per route in ES6 code
 - [ ] PM2 webpack setup so client JS code also auto rebuilds and restarts - [link](https://stackoverflow.com/questions/34230275/how-to-run-webpack-watch-using-pm2)
 - [ ] Option to build/include no client JS bundle at all for some pages (static)
