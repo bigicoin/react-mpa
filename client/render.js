@@ -21,6 +21,10 @@ module.exports = (key, assets, props = {}) => {
   const requireKey = `./${ key }`
   const App = requirePage(requireKey).default
   const head = App.head && App.head(props)
+  const noClientJs = App.noClientJs && App.noClientJs();
+  if (noClientJs) {
+    assets.scripts = [];
+  }
 
   return toString(
     <Document assets={ assets } head={ head } props={ props }>

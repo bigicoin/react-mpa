@@ -3,6 +3,10 @@ import { h, Component } from 'preact'
 import styles from './styles.css'
 
 export default class AppContact extends Component {
+  static noClientJs() {
+    return true;
+  }
+
   static head() {
     return [
       <title>Contact</title>,
