@@ -49,7 +49,7 @@ $ npm start
 
 #### Todo (bigicoin) for development ease
 
-- [ ] Webpack config should allow prod and dev setup, outputs minified/unminified bundles - [link](https://stackoverflow.com/questions/25956937/how-to-build-minified-and-uncompressed-bundle-with-webpack)
+- [x] Webpack config should allow prod and dev setup, outputs minified/unminified bundles - [link](https://stackoverflow.com/questions/25956937/how-to-build-minified-and-uncompressed-bundle-with-webpack)
 - [x] Add PM2 to project (pre-req for several items below)
 - [x] PM2 watch setup to autorestart server on file changes - [link](http://pm2.keymetrics.io/docs/usage/watch-and-restart/)
 - [x] Node server with ES6 / babel transpiling to code server JS code in full ES6 - [link](http://pm2.keymetrics.io/docs/tutorials/using-transpilers-with-pm2)

@@ -8,8 +8,8 @@
     "build-server": "babel server/src -d server/dist",
     "prestart": "npm run build-client",
     "start": "pm2 start pm2-config.json",
-    "production": "npm run build-client; npm run build-server; pm2 start pm2-config.json --env production",
-    "clean": "rm -rf .build"
+    "production": "NODE_ENV=production npm run build-client; npm run build-server; pm2 start pm2-config.json --env production",
+    "clean": "rm -rf client/.build"
   },
   "dependencies": {
     "babel-cli": "^6.11.4",

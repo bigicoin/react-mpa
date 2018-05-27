@@ -3,12 +3,14 @@
  * External Dependencies
  */
 
-const { optimize: { CommonsChunkPlugin } } = require('webpack')
+const { optimize: { CommonsChunkPlugin, UglifyJsPlugin } } = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const nodeExternals = require('webpack-node-externals')
 const path = require('path')
 const glob = require('glob')
+
+const isProd = (process.env.NODE_ENV === 'production');
 
 const css = {
   critical: new ExtractTextPlugin({
@@ -22,6 +24,18 @@ const css = {
   }),
 }
 
+const plugins = [
+  css.critical,
+  css.nonCritical,
+  new CommonsChunkPlugin({ name: 'commons' }),
+  new ManifestPlugin(),
+];
+if (isProd) {
+  plugins.push(new UglifyJsPlugin({
+    minimize: true,
+    compress: { warnings: false }
+  }));
+}
 
 module.exports = [
   {
@@ -30,7 +44,7 @@ module.exports = [
 
     output: {
       path: `${ __dirname }/.build`,
-      filename: '[name]/[chunkhash:8].js',
+      filename: isProd ? '[name]/[chunkhash:8].min.js' : '[name]/[chunkhash:8].js',
     },
 
     // devtool: 'source-maps',
@@ -83,12 +97,7 @@ module.exports = [
       ],
     },
 
-    plugins: [
-      css.critical,
-      css.nonCritical,
-      new CommonsChunkPlugin({ name: 'commons' }),
-      new ManifestPlugin(),
-    ],
+    plugins,
   },
 
   {
