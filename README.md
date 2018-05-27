@@ -54,7 +54,7 @@ $ npm start
 - [x] PM2 watch setup to autorestart server on file changes - [link](http://pm2.keymetrics.io/docs/usage/watch-and-restart/)
 - [x] Node server with ES6 / babel transpiling to code server JS code in full ES6 - [link](http://pm2.keymetrics.io/docs/tutorials/using-transpilers-with-pm2)
 - [x] Subtask: Server builds to `dist` bundle for PM2 to run for production setup
-- [ ] Subtask: Example server logic files per route in ES6 code
+- [x] Subtask: Example server logic files per route in ES6 code
 - [ ] PM2 webpack setup so client JS code also auto rebuilds and restarts - [link](https://stackoverflow.com/questions/34230275/how-to-run-webpack-watch-using-pm2)
 - [ ] Option to build/include no client JS bundle at all for some pages (static)
 

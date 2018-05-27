@@ -1,3 +1,4 @@
+import articles from './articles';
 
 module.exports = ({ app, render }) => {
   app.get('/', (req, res) => {
@@ -9,21 +10,7 @@ module.exports = ({ app, render }) => {
   })
 
   app.get('/articles/:id', async (req, res) => {
-    const { params: { id } } = req
-
-    const articles = {
-      1: {
-        title: 'Article One Title',
-        body: 'Article one body',
-      },
-      2: {
-        title: 'Article Two Title',
-        body: 'Article two body',
-      },
-    }
-
-    const article = articles[id]
-    res.send(render.article(article))
+    articles(req, res, render);
   })
 
   app.get('*', (req, res, next) => {
