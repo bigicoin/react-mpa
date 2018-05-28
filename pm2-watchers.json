@@ -1,0 +1,7 @@
+{
+  "apps": [{
+    "name": "client-watch",
+    "args": ["run", "build-client-watch"],
+    "script": "npm"
+  }]
+}

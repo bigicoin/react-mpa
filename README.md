@@ -55,7 +55,7 @@ $ npm start
 - [x] Node server with ES6 / babel transpiling to code server JS code in full ES6 - [link](http://pm2.keymetrics.io/docs/tutorials/using-transpilers-with-pm2)
 - [x] Subtask: Server builds to `dist` bundle for PM2 to run for production setup
 - [x] Subtask: Example server logic files per route in ES6 code
-- [ ] PM2 webpack setup so client JS code also auto rebuilds and restarts - [link](https://stackoverflow.com/questions/34230275/how-to-run-webpack-watch-using-pm2)
+- [x] PM2 webpack setup so client JS code also auto rebuilds and restarts - [link](https://stackoverflow.com/questions/34230275/how-to-run-webpack-watch-using-pm2)
 - [x] Option to build/include no client JS bundle at all for some pages (static), allows for skipping even common bundles to reduce load times on static pages
 
 #### Webpack Dev server

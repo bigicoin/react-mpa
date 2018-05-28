@@ -5,10 +5,11 @@
   "license": "MIT",
   "scripts": {
     "build-client": "webpack --config client/webpack.config.js",
+    "build-client-watch": "webpack --watch --config client/webpack.config.js",
     "build-server": "babel server/src -d server/dist",
-    "prestart": "npm run build-client",
-    "start": "pm2 start pm2-config.json",
-    "production": "NODE_ENV=production npm run build-client; npm run build-server; pm2 start pm2-config.json --env production",
+    "prestart": "pm2 start pm2-watchers.json",
+    "start": "pm2 start pm2-app.json",
+    "production": "NODE_ENV=production npm run build-client; npm run build-server; pm2 start pm2-app.json --env production",
     "clean": "rm -rf client/.build"
   },
   "dependencies": {
