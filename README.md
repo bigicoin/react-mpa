@@ -1,6 +1,6 @@
-## Webpack Simple Server-Side (SSR) Rendered React Multi-Page App (MPA) Example / Starter Framework
+## Server-Side Rendered (SSR) React Multi-Page App (MPA) Starter Framework
 
-> A minimal example of an app that renders React components on the server and 'inflates' (becomes interactive) on the client.
+> A minimal boilerplate of an app that renders React components on the server and 'inflates' (becomes interactive) on the client.
 
 #### Motivation (wilsonpage)
 
